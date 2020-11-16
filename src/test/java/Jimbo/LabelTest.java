@@ -45,7 +45,7 @@ public class LabelTest {
         WebElement ShowMassage = driver.findElement(By.xpath("//form[@id='get-input']//button"));
         ShowMassage.click();
         String yourMessage = driver.findElement(By.xpath("//div[@id='user-message']//span[@id='display']")).getText();
-        log.info(yourMessage);
+
 
         Assert.assertEquals("Hello, my name is", yourMessage);
     }
