@@ -22,7 +22,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 @Slf4j
-public class Label {
+public class LabelTest {
     WebDriver driver;
 
     @Before
