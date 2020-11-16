@@ -11,6 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -23,10 +24,10 @@ public class LabelTest {
 
     @Before
     public void Orig() {
-        WebDriverManager.chromedriver().setup();
+        WebDriverManager.firefoxdriver().setup();
 //        ChromeOptions options = new ChromeOptions();
 //        options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
-        driver = new ChromeDriver();
+        driver = new FirefoxDriver();
         driver.get("https://www.seleniumeasy.com/test/");
         driver.manage().window().maximize();
         WebDriverWait wait = new WebDriverWait(driver, 5);
