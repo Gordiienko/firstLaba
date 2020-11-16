@@ -31,7 +31,6 @@ public class LabelTest {
         driver.manage().window().maximize();
         WebDriverWait wait = new WebDriverWait(driver, 5);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='at-cv-lightbox-close']"))).click();
-
     }
 
     @Test
@@ -45,8 +44,6 @@ public class LabelTest {
         WebElement ShowMassage = driver.findElement(By.xpath("//form[@id='get-input']//button"));
         ShowMassage.click();
         String yourMessage = driver.findElement(By.xpath("//div[@id='user-message']//span[@id='display']")).getText();
-
-
         Assert.assertEquals("Hello, my name is", yourMessage);
     }
 
@@ -71,7 +68,6 @@ public class LabelTest {
 
     @Test
     public void Test3() {
-
         WebElement InputForms = driver.findElement(By.xpath("//a[contains(text(),'Input Forms')]"));
         InputForms.click();
         WebElement CheckboxDemo = driver.findElement(By.xpath("//a[contains(text(),'Checkbox Demo')]"));
@@ -101,7 +97,6 @@ public class LabelTest {
 
     @Test
     public void Test5() {
-
         WebElement InputForms = driver.findElement(By.xpath("//a[contains(text(),'Input Forms')]"));
         InputForms.click();
         WebElement selectDropdownList = driver.findElement(By.xpath("//a[contains(text(),'Select Dropdown List')]"));
@@ -152,8 +147,6 @@ public class LabelTest {
         String expectedDate = yesterday.format(formatter);
         String actualDate = driver.findElement(By.xpath("//div[@class='input-group date']//input[@type='text']")).getAttribute("value");
         Assert.assertEquals(expectedDate, actualDate);
-
-
     }
 
     @After
