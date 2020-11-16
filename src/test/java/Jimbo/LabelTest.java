@@ -27,7 +27,6 @@ public class LabelTest {
 
     @Before
     public void Orig() {
-        BasicConfigurator.configure();
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
@@ -160,8 +159,9 @@ public class LabelTest {
 
 
     }
+
     @After
-    public void exit(){
+    public void exit() {
         driver.quit();
     }
 }
