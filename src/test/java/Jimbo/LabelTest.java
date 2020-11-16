@@ -24,8 +24,8 @@ public class LabelTest {
     @Before
     public void Orig() {
         WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
+//        ChromeOptions options = new ChromeOptions();
+//        options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
         driver = new ChromeDriver();
         driver.get("https://www.seleniumeasy.com/test/");
         driver.manage().window().maximize();
