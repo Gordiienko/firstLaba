@@ -160,4 +160,8 @@ public class LabelTest {
 
 
     }
+    @After
+    public void exit(){
+        driver.quit();
+    }
 }
